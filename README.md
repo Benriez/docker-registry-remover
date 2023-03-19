@@ -1,6 +1,4 @@
 paste this script inside /captain/data/registry/docker/registry/v2/blobs/sha256/
-<!-- delete unused manifest tags  -->
-cd /captain/data/registry/docker/registry/v2/repositories/captain/
 
 <!-- exec garbage collector -->
 docker exec -it $(docker ps --filter name=captain-registry -q) /bin/sh
@@ -13,5 +11,9 @@ execute the docker-remover script
 ./docker-remvover.sh
 
 
+
+
+<!-- delete unused manifest tags  -->
+cd /captain/data/registry/docker/registry/v2/repositories/captain/
 <!-- registry blobs path  -->
 cd /captain/data/registry/docker/registry/v2/blobs/sha256
